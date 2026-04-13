@@ -3,6 +3,7 @@ import RootLayout from '../layout/RootLayout';
 import ErrorPage from '../pages/ErrorPage';
 import TimeLine from '../pages/timeLinePage/TimeLine';
 import StatsPage from '../pages/statsPage/StatsPage';
+import HomePage from '../pages/homePage/HomePage';
 
 export const router = createBrowserRouter([
   {
@@ -11,17 +12,17 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <h2>Homepage</h2>
+        element: <HomePage />,
       },
       {
-        path: "/timeline",
-        element: <TimeLine/>
+        path: '/timeline',
+        element: <TimeLine />,
       },
       {
-        path: "/stats",
-        element: <StatsPage/>
+        path: '/stats',
+        element: <StatsPage />,
       },
     ],
-    errorElement:<ErrorPage/>
+    errorElement: <ErrorPage />,
   },
 ]);

@@ -1,0 +1,121 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIIte7CFh9xcOpbxTrL03vATLooVyhZYxKoA&s",
+    "email": "john@example.com",
+    "days_since_contact": 12,
+    "status": "overdue",
+    "tags": ["college", "close friend"],
+    "bio": "Met in university. Love hiking together.",
+    "goal": 14,
+    "next_due_date": "2025-07-20"
+  },
+  {
+    "id": 2,
+    "name": "Sarah Khan",
+    "picture": "https://imgcdn.stablediffusionweb.com/2024/12/3/80f18dc7-e45d-43fa-81b2-3048e4672cea.jpg",
+    "days_since_contact": 10,
+    "status": "almost due",
+    "tags": ["work", "designer"],
+    "bio": "Colleague from previous job.",
+    "goal": 12,
+    "next_due_date": "2025-07-18"
+  },
+  {
+    "id": 3,
+    "name": "Michael Lee",
+    "picture": "https://m.media-amazon.com/images/S/amzn-author-media-prod/rpb7j499r2plih8p6sv6cfg3eo.jpg",
+    "email": "michael@example.com",
+    "days_since_contact": 5,
+    "status": "on-track",
+    "tags": ["gym", "fitness"],
+    "bio": "Workout partner at local gym.",
+    "goal": 10,
+    "next_due_date": "2025-07-25"
+  },
+  {
+    "id": 4,
+    "name": "Emily Stone",
+    "picture": "https://elleit.h-cdn.co/assets/16/46/2560x2560/square-1479137089-gettyimages-622941636.jpg",
+    "email": "emily@example.com",
+    "days_since_contact": 20,
+    "status": "overdue",
+    "tags": ["family"],
+    "bio": "Cousin living abroad.",
+    "goal": 15,
+    "next_due_date": "2025-07-15"
+  },
+  {
+    "id": 5,
+    "name": "David Smith",
+    "picture": "https://resizing.flixster.com/8vJfmxIhFd4rqbxE0b0y5V9SDEw=/fit-in/705x460/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/1097325_v9_aa.jpg",
+    "email": "david@example.com",
+    "days_since_contact": 8,
+    "status": "almost due",
+    "tags": ["business", "client"],
+    "bio": "Important business client.",
+    "goal": 10,
+    "next_due_date": "2025-07-19"
+  },
+  {
+    "id": 6,
+    "name": "Brie Larson",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/4/40/Captain_Marvel_trailer_at_the_National_Air_and_Space_Museum_4_%28cropped%29.jpg",
+    "email": "ayesha@example.com",
+    "days_since_contact": 3,
+    "status": "on-track",
+    "tags": ["school", "friend"],
+    "bio": "School friend, very supportive.",
+    "goal": 7,
+    "next_due_date": "2025-07-27"
+  },
+  {
+    "id": 7,
+    "name": "Chris Evans",
+    "picture": "https://hips.hearstapps.com/hmg-prod/images/chris-evans-gettyimages-1138769185.jpg?crop=1.00xw:1.00xh;0,0&resize=640:*",
+    "email": "chris@example.com",
+    "days_since_contact": 16,
+    "status": "overdue",
+    "tags": ["travel", "buddy"],
+    "bio": "Travel companion from last trip.",
+    "goal": 14,
+    "next_due_date": "2025-07-16"
+  },
+  {
+    "id": 8,
+    "name": "Fatima Noor",
+    "picture": "https://media.licdn.com/dms/image/v2/D5603AQEDzJ6ma8FLrQ/profile-displayphoto-scale_200_200/B56Zlu4MQrI0AY-/0/1758501850244?e=2147483647&v=beta&t=XJGNPsvj6k-FBTksHBPkRf9Yc6Ph5kmUlCuSq7pP53c",
+    "email": "fatima@example.com",
+    "days_since_contact": 9,
+    "status": "almost due",
+    "tags": ["neighbor"],
+    "bio": "Friendly neighbor next door.",
+    "goal": 10,
+    "next_due_date": "2025-07-18"
+  },
+  {
+    "id": 9,
+    "name": "Robert Downey JR",
+    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi9P9U6CBkNZi2Xkyodp9a1zuqxubDE5y4Cg&s",
+    "email": "daniel@example.com",
+    "days_since_contact": 2,
+    "status": "on-track",
+    "tags": ["tech", "developer"],
+    "bio": "Met at a coding bootcamp.",
+    "goal": 7,
+    "next_due_date": "2025-07-28"
+  },
+  {
+    "id": 10,
+    "name": "Chris Hemsworth",
+    "picture": "https://hips.hearstapps.com/hmg-prod/images/chris-hemsworth-attends-marvel-studios-thor-love-and-news-photo-1709740913.jpg?crop=0.891xw:0.781xh;0.0380xw,0.00605xh&resize=640:*",
+    "email": "nusrat@example.com",
+    "days_since_contact": 18,
+    "status": "overdue",
+    "tags": ["university", "project"],
+    "bio": "Worked together on university project.",
+    "goal": 12,
+    "next_due_date": "2025-07-17"
+  }
+]

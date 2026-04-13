@@ -1,12 +1,12 @@
 import React from 'react';
-import Navbar from '../../components/Navbar';
-import { Outlet } from 'react-router';
-import Footer from '../../components/Footer';
+import AddFriend from './AddFriend';
+import AllFriends from './AllFriends';
 
 const HomePage = () => {
   return (
-    <div>
-      Banner
+    <div className="bg-[#f8fafc]">
+      <AddFriend />
+      <AllFriends />
     </div>
   );
 };
