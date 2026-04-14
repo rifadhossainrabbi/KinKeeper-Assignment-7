@@ -6,13 +6,17 @@ import { PiArchive } from 'react-icons/pi';
 import { MdOutlineWifiCalling3 } from 'react-icons/md';
 import { BsChatLeftText } from 'react-icons/bs';
 import { FiVideo } from 'react-icons/fi';
+import { FriendsContextInfo } from '../../context/FriendsContext';
+import { useContext } from 'react';
+import { toast } from 'react-toastify';
 
 const DetailPage = () => {
+  const { friendsCard, setFriendsCard } = useContext(FriendsContextInfo);
   const { id } = useParams();
   const { friends, loading } = useFriends();
   const expectedId = friends.find((friend) => String(friend.id) == id);
-  console.log(friends, loading);
-  console.log(expectedId, 'expectedId');
+  // console.log(friends, loading);
+  // console.log(expectedId, 'expectedId');
 
   if (loading) {
     return (
@@ -25,13 +29,27 @@ const DetailPage = () => {
   const due = new Date(expectedId.next_due_date);
 
   const diffTime = today - due;
-  console.log(diffTime);
   const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
   // Formating data to human Readable
   const formatted = due.toDateString();
 
-  console.log(formatted);
+  const handleFriendsData = (type) => {
+    const newExpectedData = {
+      ...expectedId,
+      actionType: type,
+    };
+      toast.success(`Successfully ${type} ${expectedId.name}!`);
+    const friendsCardIsExists = friendsCard.find(
+      (data) =>
+        data.id === expectedId.id && data.actionType === type,
+    );
+    if (!friendsCardIsExists) {
+      setFriendsCard([...friendsCard, { ...expectedId, ...newExpectedData }]);
+    } else {
+      toast.error(`Already added ${expectedId.name} to ${type}`)
+    }
+  };
 
   return (
     <div className="bg-[#f8fafc] py-12">
@@ -145,19 +163,25 @@ const DetailPage = () => {
               Quick Check-In
             </p>
             <div className=" grid grid-cols-3 gap-6 mt-6">
-              <div className="flex items-center justify-center bg-[#f8fafc] shadow-xl p-6 rounded-md h-32">
+              <div
+                onClick={() => handleFriendsData('call')}
+                className="btn border-none flex items-center justify-center bg-[#f8fafc] shadow-xl p-6 rounded-md h-32">
                 <p className="flex flex-col items-center justify-center gap-2 text-2xl font-semibold text-[#244D3F]">
                   <MdOutlineWifiCalling3 />
                   Call
                 </p>
               </div>
-              <div className="flex items-center justify-center bg-[#f8fafc] shadow-xl p-6 rounded-md h-32">
+              <div
+                onClick={() => handleFriendsData('text')}
+                className="btn border-none flex items-center justify-center bg-[#f8fafc] shadow-xl p-6 rounded-md h-32">
                 <p className="flex flex-col items-center justify-center gap-2 text-2xl font-semibold text-[#244D3F]">
                   <BsChatLeftText />
                   Text
                 </p>
               </div>
-              <div className="flex items-center justify-center bg-[#f8fafc] shadow-xl p-6 rounded-md h-32">
+              <div
+                onClick={() => handleFriendsData('video')}
+                className="btn border-none flex items-center justify-center bg-[#f8fafc] shadow-xl p-6 rounded-md h-32">
                 <p className="flex flex-col items-center justify-center gap-2 text-2xl font-semibold text-[#244D3F]">
                   <FiVideo />
                   Video

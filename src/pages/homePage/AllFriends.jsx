@@ -5,7 +5,7 @@ import { HashLoader } from 'react-spinners';
 
 const AllFriends = () => {
   const { friends, loading } = useFriends();
-  console.log(friends, loading);
+  // console.log(friends, loading);
   return (
     <div className="max-w-8/12 mx-auto pb-14">
       <h1 className="text-2xl font-semibold">Your friends</h1>

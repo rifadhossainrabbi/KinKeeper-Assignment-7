@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 const FriendCard = ({ friend }) => {
   const { id, name, picture, days_since_contact, status, tags } = friend;
-  console.log(friend);
+  // console.log(friend);
   return (
     <Link
       to={`/friend/${id}`}
