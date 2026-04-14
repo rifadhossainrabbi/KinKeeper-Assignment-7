@@ -11,8 +11,8 @@ const AllFriends = () => {
       <h1 className="text-2xl font-semibold">Your friends</h1>
 
       {loading ? (
-        <div className="flex justify-center items-center mt-10">
-          <HashLoader />
+        <div className="flex justify-center items-center my-10">
+          <HashLoader color='blue'/>
         </div>
       ) : (
         <div className="grid grid-cols-4 gap-6 mt-4">
