@@ -41,7 +41,7 @@ const TimeLine = () => {
                 <h1 className="text-xl text-gray-500">
                   <span className="text-[#244D3F] font-semibold">
                     {item.actionType}
-                  </span>{' '}
+                  </span>
                   with {item.name}
                 </h1>
 

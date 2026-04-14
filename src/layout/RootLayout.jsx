@@ -8,7 +8,7 @@ const RootLayout = () => {
   return (
     <div>
       <Navbar />
-      <ToastContainer />
+      <ToastContainer autoClose={1000} />
       <Outlet />
       <Footer />
     </div>

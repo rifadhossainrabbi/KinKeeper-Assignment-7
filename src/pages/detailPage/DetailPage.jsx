@@ -120,24 +120,24 @@ const DetailPage = () => {
           <div className="grid grid-cols-3 gap-6">
             <div className="px-5 py-7 shadow bg-white rounded-md text-center">
               <h1
-                className="text-xl
-             font-semibold">
+                className="text-2xl
+             font-semibold text-[#244D3F]">
                 {expectedId.days_since_contact}
               </h1>
               <p className="text-[#64748B]">Days Since Contact</p>
             </div>
             <div className="px-5 py-7 shadow bg-white rounded-md text-center">
               <h1
-                className="text-xl
-             font-semibold">
+                className="text-2xl
+             font-semibold text-[#244D3F]">
                 {expectedId.goal}
               </h1>
               <p className="text-[#64748B]">Goal(days)</p>
             </div>
             <div className="px-5 py-7 shadow bg-white rounded-md text-center">
               <h1
-                className="text-xl
-             font-semibold">
+                className="text-2xl
+             font-semibold text-[#244D3F]">
                 {formatted}
               </h1>
               <p className="text-[#64748B]">Next Due</p>
