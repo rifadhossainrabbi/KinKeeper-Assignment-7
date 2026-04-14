@@ -39,13 +39,13 @@ const DetailPage = () => {
       ...expectedId,
       actionType: type,
     };
-      toast.success(`Successfully ${type} ${expectedId.name}!`);
     const friendsCardIsExists = friendsCard.find(
       (data) =>
         data.id === expectedId.id && data.actionType === type,
     );
     if (!friendsCardIsExists) {
       setFriendsCard([...friendsCard, { ...expectedId, ...newExpectedData }]);
+      toast.success(`Successfully ${type} ${expectedId.name}!`);
     } else {
       toast.error(`Already added ${expectedId.name} to ${type}`)
     }
@@ -164,7 +164,7 @@ const DetailPage = () => {
             </p>
             <div className=" grid grid-cols-3 gap-6 mt-6">
               <div
-                onClick={() => handleFriendsData('call')}
+                onClick={() => handleFriendsData('Call')}
                 className="btn border-none flex items-center justify-center bg-[#f8fafc] shadow-xl p-6 rounded-md h-32">
                 <p className="flex flex-col items-center justify-center gap-2 text-2xl font-semibold text-[#244D3F]">
                   <MdOutlineWifiCalling3 />
@@ -172,7 +172,7 @@ const DetailPage = () => {
                 </p>
               </div>
               <div
-                onClick={() => handleFriendsData('text')}
+                onClick={() => handleFriendsData('Text')}
                 className="btn border-none flex items-center justify-center bg-[#f8fafc] shadow-xl p-6 rounded-md h-32">
                 <p className="flex flex-col items-center justify-center gap-2 text-2xl font-semibold text-[#244D3F]">
                   <BsChatLeftText />
@@ -180,7 +180,7 @@ const DetailPage = () => {
                 </p>
               </div>
               <div
-                onClick={() => handleFriendsData('video')}
+                onClick={() => handleFriendsData('Video')}
                 className="btn border-none flex items-center justify-center bg-[#f8fafc] shadow-xl p-6 rounded-md h-32">
                 <p className="flex flex-col items-center justify-center gap-2 text-2xl font-semibold text-[#244D3F]">
                   <FiVideo />
