@@ -42,10 +42,10 @@ const TimeLine = () => {
                   <span className="text-[#244D3F] font-semibold">
                     {item.actionType}
                   </span>
-                  with {item.name}
+                   with {item.name}
                 </h1>
 
-                <p>{new Date(item.next_due_date).toDateString()}</p>
+                <p>{new Date().toDateString()}</p>
               </div>
             </div>
           ))}

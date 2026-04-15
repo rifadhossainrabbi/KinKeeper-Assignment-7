@@ -3,7 +3,7 @@ import { GoPlus } from 'react-icons/go';
 
 const AddFriend = () => {
   return (
-    <div className="max-w-8/12 mx-auto pt-12">
+    <div className="max-w-11/12 md:max-w-10/12 lg:max-w-8/12 mx-auto pt-12">
       <div className=" space-y-6">
         <h1 className="text-5xl font-semibold text-center">
           Friends to keep close in your life
@@ -16,7 +16,7 @@ const AddFriend = () => {
           <GoPlus size={25} />
           Add Friend
         </button>
-        <div className="grid grid-cols-4 gap-8 text-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 text-center">
           <div className="px-5 py-7 shadow bg-white rounded-md">
             <h1
               className="text-xl

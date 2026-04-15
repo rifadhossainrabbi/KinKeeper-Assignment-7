@@ -8,7 +8,7 @@ import { Link } from 'react-router';
 const Footer = () => {
   return (
     <div className="bg-[#244d3f] text-white py-10">
-      <div className="max-w-8/12 mx-auto ">
+      <div className="max-w-11/12 md:max-w-10/12 lg:max-w-8/12 mx-auto ">
         <div className="space-y-4">
           <img src={FooterLogo} className="mx-auto" alt="Footer Logo" />
           <p className="text-center text-gray-300">
@@ -32,9 +32,9 @@ const Footer = () => {
         </div>
         {/* Divider */}
         <div className="divider before:bg-gray-500 after:bg-gray-500 my-6"></div>
-        <div className="flex justify-between text-gray-400">
-          <p>© 2026 KeenKeeper. All rights reserved.</p>
-          <ul className="flex gap-3">
+        <div className="flex flex-col md:flex-row lg:flex-row items-center justify-between text-gray-400">
+          <p className='text-center md:text-left lg:text-left'>© 2026 KeenKeeper. All rights reserved.</p>
+          <ul className="flex flex-col md:flex-row lg:flex-row justify-center items-center gap-3">
             <li>Privacy Policy</li>
             <li>Terms fo Service</li>
             <li>Cookies</li>

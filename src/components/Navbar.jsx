@@ -26,7 +26,7 @@ const Navbar = () => {
 
   return (
     <div className="bg-base-100 shadow-sm">
-      <div className="navbar container mx-auto">
+      <div className="flex flex-col sm:flex-row gap-3 md:flex-row lg:flex-row items-center md:justify-between py-3 w-full md:max-w-6xl mx-auto px-4">
         <div className="flex-1">
           <a>
             <div className="flex text-3xl font-semibold">
@@ -37,10 +37,11 @@ const Navbar = () => {
             </div>
           </a>
         </div>
-        <div className="flex gap-3">
+        <div className="flex flex-col sm:flex-row md:flex-row gap-3 order-1 md:order-2">
           {navItems.map((item, ind) => (
             <MyNavLinks key={ind} to={item.path}>
-              {item.icon}{item.text}
+              {item.icon}
+              {item.text}
             </MyNavLinks>
           ))}
         </div>
