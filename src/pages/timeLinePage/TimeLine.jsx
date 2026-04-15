@@ -39,7 +39,7 @@ const TimeLine = () => {
 
               <div>
                 <h1 className="text-xl text-gray-500">
-                  <span className="text-[#244D3F] font-semibold">
+                  <span className="text-[#244D3F] font-semibold mr-1">
                     {item.actionType}
                   </span>
                    with {item.name}
