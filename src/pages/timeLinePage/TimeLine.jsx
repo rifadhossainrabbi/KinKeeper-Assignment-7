@@ -46,17 +46,13 @@ const TimeLine = () => {
         <h1 className="text-3xl font-semibold mb-3">Timeline</h1>
 
         <select
-          value={filter}
+          defaultValue="Pick a color"
           onChange={handleFilterOnChange}
-          className={'border border-gray-300 p-2 rounded mb-4 shadow-md w-full md:w-[20%]'}>
-          {/* hidden option */}
-          <option value="" disabled hidden>
-            Filter Timeline
-          </option>
-
-          <option value="Call">Call</option>
-          <option value="Text">Text</option>
-          <option value="Video">Video</option>
+          className="select mb-4">
+          <option disabled={true}>Filter Timeline</option>
+          <option>Call</option>
+          <option>Text</option>
+          <option>Video</option>
         </select>
 
         <div className="space-y-5">
