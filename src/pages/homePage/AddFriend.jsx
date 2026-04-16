@@ -16,7 +16,7 @@ const AddFriend = () => {
           <GoPlus size={25} />
           Add Friend
         </button>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 text-center">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 text-center">
           <div className="px-5 py-7 shadow bg-white rounded-md">
             <h1
               className="text-xl

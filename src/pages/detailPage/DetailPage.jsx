@@ -43,11 +43,11 @@ const DetailPage = () => {
 
   return (
     <div className="bg-[#f8fafc] py-12">
-      <div className="max-w-11/12 md:max-w-10/12 lg:max-w-8/12 mx-auto grid gap-6 grid-cols-1 md:grid-cols-12 items-stretch">
+      <div className="max-w-11/12 md:max-w-10/12 lg:max-w-8/12 mx-auto grid gap-6 grid-cols-1 md:items-stretch lg:grid-cols-12 items-stretch">
         {/* left section */}
-        <div className="my-10 md:col-span-4 lg:col-span-4 flex flex-col h-full">
+        <div className="my-0 md:my-10 row-span-5 md:row-span-6 lg:col-span-4 flex flex-col h-full">
           {/* left section friend card */}
-          <div className="bg-white shadow-xl p-6 rounded-md">
+          <div className="bg-white shadow-xl p-6 rounded-md mb-4">
             <img
               src={expectedId.picture}
               className="w-24 h-24 rounded-full mx-auto mb-2"
@@ -89,25 +89,31 @@ const DetailPage = () => {
             <p className="text-center text-sm break-all px-2">
               Prefered:{expectedId.email}
             </p>
+            <div className="flex justify-center md:hidden">
+              <p className="flex items-center gap-1 py-2 justify-center font-semibold">
+                <RiNotificationSnoozeLine />
+                Snooz {diffDays} days
+              </p>
+            </div>
           </div>
 
           {/* left section card action buttons */}
-          <div>
-            <div className="bg-white shadow-xl mt-5 rounded-md">
+          <div className="grid grid-cols-2 md:grid-cols-1 gap-4 md:gap-4">
+            <div className="bg-white shadow-xl hidden md:flex md:justify-center rounded-md">
               <p className="flex items-center gap-1 py-2 justify-center font-semibold">
                 <RiNotificationSnoozeLine />
                 Snooz {diffDays} days
               </p>
             </div>
 
-            <div className="bg-white shadow-xl mt-3 py-2 rounded-md">
-              <p className="flex items-center gap-1 justify-center font-semibold">
+            <div className="bg-white shadow-xl rounded-md">
+              <p className="flex items-center gap-1 py-2 justify-center font-semibold">
                 <PiArchive />
                 Archive
               </p>
             </div>
 
-            <div className="bg-white shadow-xl mt-3 rounded-md">
+            <div className="bg-white shadow-xl rounded-md">
               <p className="flex items-center gap-1 py-2 justify-center text-red-500 font-semibold">
                 <RiDeleteBinLine color="red" />
                 Delete
@@ -117,9 +123,9 @@ const DetailPage = () => {
         </div>
 
         {/* right section */}
-        <div className="my-10 md:col-span-8 lg:col-span-8 space-y-6 flex flex-col h-full">
+        <div className="my-0 md:my-10 row-span-5 md:row-span-6 lg:col-span-8 space-y-6 flex flex-col h-full">
           {/* right section card activitise */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 md:gap-6">
             <div className="px-5 py-7 shadow bg-white rounded-md text-center">
               <h1 className="text-2xl font-semibold text-[#244D3F]">
                 {expectedId.days_since_contact}
@@ -161,13 +167,13 @@ const DetailPage = () => {
           </div>
 
           {/* quick check in section */}
-          <div className="bg-white shadow-xl p-8 rounded-md">
+          <div className="bg-white shadow-xl p-7 rounded-md">
             <p className="text-2xl font-semibold text-[#244D3F]">
               Quick Check-In
             </p>
 
             {/* buttons for contacts */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-6">
+            <div className="grid grid-cols-3 gap-6 mt-6">
               <div
                 onClick={() => handleFriendsData('Call')}
                 className="btn border-none flex items-center justify-center bg-[#f8fafc] shadow-xl p-6 rounded-md h-32">

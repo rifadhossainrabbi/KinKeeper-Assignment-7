@@ -48,7 +48,7 @@ const TimeLine = () => {
         <select
           value={filter}
           onChange={handleFilterOnChange}
-          className={'border p-2 rounde'}>
+          className={'border border-gray-300 p-2 rounded mb-4 shadow-md w-full md:w-[20%]'}>
           {/* hidden option */}
           <option value="" disabled hidden>
             Filter Timeline
