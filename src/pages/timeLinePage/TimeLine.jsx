@@ -46,7 +46,7 @@ const TimeLine = () => {
         <h1 className="text-3xl font-semibold mb-3">Timeline</h1>
 
         <select
-          defaultValue=""
+          defaultValue="Pick a color"
           onChange={handleFilterOnChange}
           className="select mb-4">
           <option disabled={true}>Filter Timeline</option>
