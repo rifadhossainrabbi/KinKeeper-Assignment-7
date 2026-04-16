@@ -8,7 +8,7 @@ const AddFriend = () => {
         <h1 className="text-5xl font-semibold text-center">
           Friends to keep close in your life
         </h1>
-        <p className="w-[48%] mx-auto text-center">
+        <p className="w-full md:w-[48%] mx-auto text-center">
           Your personal shelf of meaningful connections. Browse, tend, and
           nurture the relationships that matter most.
         </p>
