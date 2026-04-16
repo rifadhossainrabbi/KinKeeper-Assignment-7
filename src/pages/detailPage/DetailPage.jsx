@@ -37,15 +37,8 @@ const DetailPage = () => {
       ...expectedId,
       actionType: type,
     };
-    const friendsCardIsExists = friendsCard.find(
-      (data) => data.id === expectedId.id && data.actionType === type,
-    );
-    if (!friendsCardIsExists) {
-      setFriendsCard([...friendsCard, { ...expectedId, ...newExpectedData }]);
-      toast.success(`Successfully ${type} ${expectedId.name}!`);
-    } else {
-      toast.error(`Already added ${expectedId.name} to ${type}`);
-    }
+    setFriendsCard([...friendsCard, { ...expectedId, ...newExpectedData }]);
+    toast.success(`Successfully ${type} ${expectedId.name}!`);
   };
 
   return (
