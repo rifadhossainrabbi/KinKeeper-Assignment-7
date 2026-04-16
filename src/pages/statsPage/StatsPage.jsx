@@ -25,7 +25,7 @@ const StatsPage = () => {
   ];
   return callLength == 0 && textLength == 0 && videoLength == 0 ? (
     <div className="text-center min-h-[50vh] flex justify-center items-center bg-[#f8fafc]">
-      <p className="text-5xl">No data added</p>
+      <p className="text-5xl">No data added.</p>
     </div>
   ) : (
     <div className="bg-[#f8fafc]">
