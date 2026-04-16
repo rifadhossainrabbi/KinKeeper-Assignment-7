@@ -29,7 +29,7 @@ const StatsPage = () => {
     </div>
   ) : (
     <div className="bg-[#f8fafc]">
-      <div className="max-w-8/12 mx-auto py-14">
+      <div className="max-w-11/12 md:max-w-10/12 lg:max-w-8/12 mx-auto py-14">
         <h1 className="text-3xl font-bold mb-5">Friendship Analytics</h1>
         <div className="bg-white shadow rounded-md p-8">
           <p className="text-2xl font-semibold">By Interaction Type</p>

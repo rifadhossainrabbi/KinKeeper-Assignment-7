@@ -42,7 +42,7 @@ const TimeLine = () => {
     </div>
   ) : (
     <div className="bg-[#f8fafc]">
-      <div className="max-w-8/12 mx-auto py-20">
+      <div className="max-w-11/12 md:max-w-10/12 lg:max-w-8/12 mx-auto py-20">
         <h1 className="text-3xl font-semibold mb-3">Timeline</h1>
 
         <select
