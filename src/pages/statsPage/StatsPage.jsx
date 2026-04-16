@@ -19,9 +19,9 @@ const StatsPage = () => {
   });
   console.log(callLength, textLength, videoLength);
   const data = [
-    { name: 'Call', value: callLength, fill: '#2563EB' },
-    { name: 'Text', value: textLength, fill: '#16A34A' },
-    { name: 'Video', value: videoLength, fill: '#F59E0B'},
+    { name: 'Call', value: callLength, fill: '#244d3f' },
+    { name: 'Text', value: textLength, fill: '#7f37f5' },
+    { name: 'Video', value: videoLength, fill: '#37a163' },
   ];
   return callLength == 0 && textLength == 0 && videoLength == 0 ? (
     <div className="text-center min-h-[50vh] flex justify-center items-center bg-[#f8fafc]">
