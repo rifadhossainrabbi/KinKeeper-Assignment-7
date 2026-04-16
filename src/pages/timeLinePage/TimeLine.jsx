@@ -1,8 +1,11 @@
 import React, { useContext } from 'react';
 import { FriendsContextInfo } from '../../context/FriendsContext';
-import { MdCall } from 'react-icons/md';
-import { BsFillChatLeftTextFill } from 'react-icons/bs';
-import { FaVideo } from 'react-icons/fa';
+// import { MdCall } from 'react-icons/md';
+// import { BsFillChatLeftTextFill } from 'react-icons/bs';
+// import { FaVideo } from 'react-icons/fa';
+import CallImage from '../../assets/call.png';
+import TextImage from '../../assets/text.png';
+import VideoImage from '../../assets/video.png';
 
 const TimeLine = () => {
   const { friendsCard, setFriendsCard } = useContext(FriendsContextInfo);
@@ -14,11 +17,11 @@ const TimeLine = () => {
   // const formattedDate = due.toDateString();
   const handleImagesIcon = (type) => {
     if (type == 'Call') {
-      return <MdCall color='blue' size={25}/>;
+      return CallImage;
     } else if (type == 'Text') {
-      return <BsFillChatLeftTextFill color='gray' size={25} />;
+      return TextImage;
     } else {
-      return <FaVideo color='cyan' size={25} />;
+      return VideoImage;
     }
   };
   return friendsCard.length === 0 ? (
@@ -35,14 +38,20 @@ const TimeLine = () => {
             <div
               key={ind}
               className="bg-white shadow-xl p-6 rounded-md flex items-center gap-4">
-              <div>{handleImagesIcon(item.actionType)}</div>
+              <div>
+                <img
+                  src={handleImagesIcon(item.actionType)}
+                  alt={item.actionType}
+                  className="w-10 h-10"
+                />
+              </div>
 
               <div>
                 <h1 className="text-xl text-gray-500">
                   <span className="text-[#244D3F] font-semibold mr-1">
                     {item.actionType}
                   </span>
-                   with {item.name}
+                  with {item.name}
                 </h1>
 
                 <p>{new Date().toDateString()}</p>
