@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { FriendsContextInfo } from '../../context/FriendsContext';
 // import { MdCall } from 'react-icons/md';
 // import { BsFillChatLeftTextFill } from 'react-icons/bs';
@@ -8,6 +8,7 @@ import TextImage from '../../assets/text.png';
 import VideoImage from '../../assets/video.png';
 
 const TimeLine = () => {
+  const [filter, setFilter] = useState('');
   const { friendsCard, setFriendsCard } = useContext(FriendsContextInfo);
   console.log(friendsCard, setFriendsCard);
   // const today = new Date();
@@ -24,7 +25,18 @@ const TimeLine = () => {
       return VideoImage;
     }
   };
-  return friendsCard.length === 0 ? (
+
+  const handleFilterOnChange = (e) => {
+    const value = e.target.value;
+    setFilter(value);
+    console.log(value, 'filter');
+  };
+  const filteredData =
+    filter === ''
+      ? friendsCard
+      : friendsCard.filter((item) => item.actionType === filter);
+
+  return filteredData.length === 0 ? (
     <div className="text-center min-h-[50vh] flex justify-center items-center bg-[#f8fafc]">
       <p className="text-5xl">No data added</p>
     </div>
@@ -33,8 +45,22 @@ const TimeLine = () => {
       <div className="max-w-8/12 mx-auto py-20">
         <h1 className="text-3xl font-semibold mb-3">Timeline</h1>
 
+        <select
+          value={filter}
+          onChange={handleFilterOnChange}
+          className={'border p-2 rounde'}>
+          {/* hidden option */}
+          <option value="" disabled hidden>
+            Filter Timeline
+          </option>
+
+          <option value="Call">Call</option>
+          <option value="Text">Text</option>
+          <option value="Video">Video</option>
+        </select>
+
         <div className="space-y-5">
-          {friendsCard.map((item, ind) => (
+          {filteredData.map((item, ind) => (
             <div
               key={ind}
               className="bg-white shadow-xl p-6 rounded-md flex items-center gap-4">
