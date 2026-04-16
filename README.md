@@ -1,16 +1,21 @@
-# React + Vite
+## Project Name 
+** KeenKeeper**
+## Description 
+This Web application is designed for manage and interactive with friends.Here we have some friend and We can connect each others.We can call, text and also Video call to our friends.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Technologies Used
+ * React.js
+ * Tailwind CSS
+ * React Router
+ * Context API
+ * React Icons
+ * Vite
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+ ## Functionality
+  * View and manage friends list
+  * Call functionality UI
+  * Chat interface design
+  * Video call option (UI)
+  * Fast and responsive design
+  * Dynamic data handling with custom hooks
+  * Clean and user-friendly interface
