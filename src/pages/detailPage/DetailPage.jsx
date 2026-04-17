@@ -38,7 +38,7 @@ const DetailPage = () => {
       actionType: type,
     };
     setFriendsCard([...friendsCard, { ...expectedId, ...newExpectedData }]);
-    toast.success(`Successfully ${type} ${expectedId.name}!`);
+    toast.success(`You Successfully ${type} ${expectedId.name}!`);
   };
 
   return (

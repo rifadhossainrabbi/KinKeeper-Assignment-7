@@ -48,7 +48,7 @@ const TimeLine = () => {
         <select
           value={filter}
           onChange={handleFilterOnChange}
-          className="select mb-4 w-full md:w-[45%]">
+          className="select mb-4 w-full md:w-[30%]">
           <option value="" disabled={true}>Filter Timeline</option>
           <option value="Call">Call</option>
           <option value="Text">Text</option>
