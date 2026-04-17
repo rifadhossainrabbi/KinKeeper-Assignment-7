@@ -39,7 +39,7 @@ const Navbar = () => {
 
       <div className="navbar-end">
         {/* Mobile Dropdown */}
-        <div className="dropdown lg:hidden">
+        <div className="dropdown md:hidden lg:hidden">
           <div tabIndex={0} role="button" className="btn btn-ghost">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -72,7 +72,7 @@ const Navbar = () => {
 
 
         {/* Desktop style */}
-        <div className="hidden lg:flex">
+        <div className="hidden md:flex lg:flex">
           <ul className="menu menu-horizontal px-1 gap-2">
             {navItems.map((item, ind) => (
               <li key={ind}>
